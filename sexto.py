@@ -1,10 +1,4 @@
 # 6. Biblioteca Externa (collections) + Contagem
-# Usando Counter da biblioteca collections, escreva um programa que receba uma frase do
-# usuário e exiba:
-# • o 3° caractere mais frequente
-# • e quantas vezes ele aparece
-# Caso hajam empates ou menos de 3 caracteres únicos, trate adequadamente com
-# mensagens claras.
 
 from collections import Counter
 

@@ -1,7 +1,4 @@
 # 1. Listas + Compreensão de Listas + Condicionais
-# Dada uma lista de números inteiros, crie um programa que gere duas listas novas:
-# • uma contendo apenas os números primos
-# • outra contendo os números não primos
 
 def is_prime(n):
     """Verifica se um número é primo."""
@@ -23,10 +20,3 @@ print(f"Lista original: {numeros}")
 print(f"Números primos: {primos}")
 print(f"Números não primos: {nao_primos}")
 
-# Teste com um conjunto menor
-# numeros_teste = [1, 2, 4, 7, 9, 11]
-# primos_teste = [n for n in numeros_teste if is_prime(n)]
-# nao_primos_teste = [n for n in numeros_teste if not is_prime(n)]
-# print(f"\nTeste: {numeros_teste}")
-# print(f"Primos Teste: {primos_teste}")
-# print(f"Não Primos Teste: {nao_primos_teste}")

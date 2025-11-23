@@ -1,7 +1,4 @@
 # 7. Processamento de Dados com Loops + Dicionários Avançados
-# Receba uma lista de dicionários representando livros:
-# Crie um programa que agrupe e mostre os livros por ano em ordem cronológica, exibindo
-# também o preço médio de cada ano.
 
 from collections import defaultdict
 

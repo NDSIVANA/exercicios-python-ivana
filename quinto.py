@@ -1,10 +1,4 @@
 # 5. Condicionais + Tratamento de Erros
-# Faça um programa que receba um número digitado pelo usuário e:
-# • verifique se pode ser convertido para float
-# • caso não possa, exiba uma mensagem de erro personalizada
-# • se o número for válido:
-# o se for decimal (ex.: 2.5), exiba sua parte inteira e decimal
-# o se for inteiro, informe se é par ou ímpar
 
 def analisar_numero(entrada):
     """Analisa a entrada do usuário, tratando erros e exibindo informações."""

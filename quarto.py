@@ -1,10 +1,4 @@
 # 4. Listas + Loop + Operações Matemáticas
-# Implemente uma função que receba dois vetores (listas) de igual tamanho e retorne o
-# produto escalar entre eles, sem usar bibliotecas externas.
-# Exemplo:
-# A = [2, 3, 5]
-# B = [1, 4, 2]
-# → Saída: 2*1 + 3*4 + 5*2 = 24
 
 def produto_escalar(vetor_a, vetor_b):
     """

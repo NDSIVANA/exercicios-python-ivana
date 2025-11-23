@@ -1,9 +1,4 @@
 # 3. Dicionários + Filtragem + Loops
-# Crie um programa que analise o dicionário abaixo e determine qual categoria é a mais
-# cara em média:
-# O programa deve exibir:
-# • categoria vencedora
-# • média formatada com 2 casas decimais
 
 produtos = {
     "Alimentação": [12.50, 8.99, 15.30],

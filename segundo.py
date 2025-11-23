@@ -1,9 +1,4 @@
 # 2. Tuplas Imutáveis + Conversão Estrutural
-# Você recebe uma lista de tuplas contendo (nome, nota) de alunos.
-# Crie um programa que:
-# • transforme os dados em um dicionário
-# • se o aluno já existir, calcule a média das notas recebidas
-# • exiba os alunos em ordem crescente de média
 
 from collections import defaultdict
 
@@ -45,7 +40,7 @@ dados_entrada = [
 # Chamando a função
 alunos_ordenados = calcular_medias_alunos(dados_entrada)
 
-print("Dados de entrada:")
+print("Dados de entrada: ")
 print(dados_entrada)
 
 print("\nAlunos ordenados por média (crescente):")
