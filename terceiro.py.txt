@@ -1,0 +1,38 @@
+# 3. Dicionários + Filtragem + Loops
+# Crie um programa que analise o dicionário abaixo e determine qual categoria é a mais
+# cara em média:
+# O programa deve exibir:
+# • categoria vencedora
+# • média formatada com 2 casas decimais
+
+produtos = {
+    "Alimentação": [12.50, 8.99, 15.30],
+    "Limpeza": [5.20, 7.80],
+    "Higiene": [10.00, 12.00, 9.50, 14.00]
+}
+
+def calcular_media_categoria(precos):
+    """Calcula a média dos preços de uma lista."""
+    if not precos:
+        return 0
+    return sum(precos) / len(precos)
+
+def encontrar_categoria_mais_cara(dicionario_produtos):
+    """Encontra a categoria com a média de preço mais alta."""
+    medias = {}
+    for categoria, precos in dicionario_produtos.items():
+        media = calcular_media_categoria(precos)
+        medias[categoria] = media
+
+    # Encontrar a categoria com a média mais alta
+    categoria_vencedora = max(medias, key=medias.get)
+    media_vencedora = medias[categoria_vencedora]
+
+    return categoria_vencedora, media_vencedora
+
+categoria, media = encontrar_categoria_mais_cara(produtos)
+
+print(f"Dicionário de produtos: {produtos}")
+print("\nResultado:")
+print(f"Categoria vencedora: {categoria}")
+print(f"Média formatada com 2 casas decimais: R$ {media:.2f}")

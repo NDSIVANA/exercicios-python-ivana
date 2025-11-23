@@ -1,0 +1,56 @@
+# 7. Processamento de Dados com Loops + Dicionários Avançados
+# Receba uma lista de dicionários representando livros:
+# Crie um programa que agrupe e mostre os livros por ano em ordem cronológica, exibindo
+# também o preço médio de cada ano.
+
+from collections import defaultdict
+
+livros = [
+    {"titulo": "A", "ano": 2020, "preco": 45},
+    {"titulo": "B", "ano": 2024, "preco": 80},
+    {"titulo": "C", "ano": 2020, "preco": 50},
+    {"titulo": "D", "ano": 2022, "preco": 40},
+    {"titulo": "E", "ano": 2024, "preco": 70}
+]
+
+def agrupar_e_analisar_livros(lista_livros):
+    """
+    Agrupa livros por ano, calcula o preço médio e exibe em ordem cronológica.
+    """
+    # Dicionário para agrupar: {ano: [lista de precos]}
+    agrupamento_precos = defaultdict(list)
+
+    for livro in lista_livros:
+        ano = livro["ano"]
+        preco = livro["preco"]
+        agrupamento_precos[ano].append(preco)
+
+    # Dicionário para armazenar o resultado final: {ano: {livros: [...], media: float}}
+    resultado_final = {}
+
+    for ano, precos in agrupamento_precos.items():
+        media_preco = sum(precos) / len(precos)
+        # Filtra os títulos dos livros para o ano atual
+        titulos_do_ano = [livro["titulo"] for livro in lista_livros if livro["ano"] == ano]
+
+        resultado_final[ano] = {
+            "livros": titulos_do_ano,
+            "media_preco": media_preco
+        }
+
+    # Ordenar o resultado pelo ano (chave do dicionário)
+    anos_ordenados = sorted(resultado_final.keys())
+
+    print("Lista de Livros Original:")
+    for livro in lista_livros:
+        print(f"  - {livro}")
+
+    print("\nAgrupamento por Ano (Ordem Cronológica):")
+    for ano in anos_ordenados:
+        dados_ano = resultado_final[ano]
+        print(f"Ano {ano}:")
+        print(f"  Livros: {', '.join(dados_ano['livros'])}")
+        print(f"  Preço Médio: R$ {dados_ano['media_preco']:.2f}")
+
+# Execução
+agrupar_e_analisar_livros(livros)
